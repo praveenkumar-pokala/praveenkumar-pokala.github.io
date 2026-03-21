@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Praveen Kumar Pokala | Applied AI Leader</title>
-  <meta name="description" content="Praveen Kumar Pokala — Applied AI Leader with experience across JPMorgan Chase, OLA Krutrim, Qualcomm, Reliance Jio, and academia. Expertise in LLMs, multimodal AI, NLP, computer vision, and mathematical optimization." />
+
   <style>
     :root {
       --bg: #f6f3ed;
@@ -12,752 +12,240 @@
       --ink: #1f2430;
       --heading: #183153;
       --muted: #5d6472;
-      --soft: #7c8594;
       --line: #ddd4c4;
       --accent: #203a63;
-      --accent-soft: #ecf1f8;
-      --gold: #8b6b2f;
-      --shadow: 0 12px 28px rgba(30, 36, 46, 0.08);
-      --radius: 14px;
-      --maxw: 1140px;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(180deg, #f7f4ee 0%, #f4f0e8 100%);
+      font-family: Georgia, serif;
+      background: #f7f4ee;
       color: var(--ink);
-      line-height: 1.72;
-      letter-spacing: 0.01em;
+      line-height: 1.7;
     }
 
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(var(--maxw), calc(100% - 36px)); margin: 0 auto; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
 
     .nav {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(247, 244, 238, 0.97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(31, 36, 48, 0.08);
+      background: #fff;
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
     }
 
     .nav-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
-      padding: 18px 0;
-    }
-
-    .brand {
-      color: var(--heading);
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
 
     .nav-links {
       display: flex;
-      flex-wrap: wrap;
       gap: 20px;
-      font-size: 0.95rem;
-      color: var(--muted);
     }
 
-    .nav-links a:hover { color: var(--heading); }
-
     .hero {
-      padding: 76px 0 34px;
+      padding: 60px 0;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.45fr 0.95fr;
+      grid-template-columns: 2fr 1fr;
       gap: 24px;
-      align-items: stretch;
     }
 
     .card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-main { padding: 40px; }
-    .hero-side { padding: 32px; }
-
-    .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      font-size: 0.84rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-      color: var(--heading);
-      font-weight: 700;
-      letter-spacing: -0.01em;
+      background: white;
+      border: 1px solid #eee;
+      padding: 28px;
+      border-radius: 12px;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 4.8vw, 4rem);
-      line-height: 1.08;
-      margin-bottom: 16px;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      color: var(--heading);
+    }
+
+    h2 {
+      color: var(--heading);
     }
 
     .lead {
       color: var(--muted);
-      font-size: 1.08rem;
-      margin: 0 0 18px;
-      max-width: 62ch;
-    }
-
-    .rule {
-      width: 90px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      margin: 24px 0;
-    }
-
-    .headline-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fbf8f2;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      border: 1px solid var(--accent);
-      transition: all 0.2s ease;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-    }
-
-    .btn-secondary {
-      color: var(--accent);
-      background: transparent;
-      border-color: rgba(32, 58, 99, 0.22);
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .monogram {
-      width: 104px;
-      height: 104px;
-      display: grid;
-      place-items: center;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #274473 0%, #1a3054 100%);
-      color: white;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      margin-bottom: 18px;
-    }
-
-    .side-role {
-      color: var(--muted);
-      margin: 8px 0 18px;
-      font-size: 0.98rem;
     }
 
     .contact-list {
-      display: grid;
-      gap: 10px;
-      margin: 18px 0 24px;
-      color: var(--muted);
-      font-size: 0.96rem;
+      margin-top: 20px;
+      line-height: 1.8;
     }
 
-    .stat-boxes {
-      display: grid;
-      gap: 12px;
+    .section {
+      padding: 40px 0;
     }
 
-    .stat {
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fcfaf5;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--heading);
-      margin-bottom: 4px;
-      font-size: 1rem;
-    }
-
-    section { padding: 28px 0; }
-
-    .section-head { margin-bottom: 18px; }
-
-    .kicker {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.82rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      font-size: 1.95rem;
-      margin-bottom: 8px;
-    }
-
-    .section-copy {
-      margin: 0;
-      color: var(--muted);
-      max-width: 74ch;
-    }
-
-    .grid-2, .grid-3 {
-      display: grid;
-      gap: 18px;
-    }
-
-    .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-
-    .panel { padding: 24px; }
-
-    .panel h3 {
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
-
-    .panel p, .panel li {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .list li + li { margin-top: 8px; }
-
-    .timeline {
-      display: grid;
-      gap: 16px;
-    }
-
-    .timeline-item {
-      padding: 22px 24px;
-      position: relative;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: linear-gradient(180deg, var(--gold), var(--accent));
-      border-top-left-radius: var(--radius);
-      border-bottom-left-radius: var(--radius);
-    }
-
-    .timeline-item h3,
-    .timeline-item .meta,
-    .timeline-item p,
-    .timeline-item ul {
-      margin-left: 10px;
-    }
-
-    .meta {
-      color: var(--soft);
-      font-size: 0.94rem;
-      margin-top: 4px;
-      margin-bottom: 10px;
-    }
-
-    .timeline-item p { color: var(--muted); }
-
-    .quote {
-      padding: 28px;
+    .footer {
+      padding: 40px 0;
       text-align: center;
-      font-style: italic;
-      color: var(--heading);
-      font-size: 1.12rem;
-      background: linear-gradient(180deg, #fdfbf7, #f8f4ed);
-    }
-
-    .footer { padding: 40px 0 60px; }
-
-    .footer-box {
-      padding: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-links a {
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
       color: var(--muted);
-      background: #fcfaf5;
     }
 
-    .footer-links a:hover { color: var(--heading); }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .grid-2,
-      .grid-3 {
+    @media (max-width: 900px) {
+      .hero-grid {
         grid-template-columns: 1fr;
       }
     }
-
-    @media (max-width: 640px) {
-      .container { width: min(var(--maxw), calc(100% - 22px)); }
-      .nav-inner { flex-direction: column; align-items: flex-start; }
-      .hero-main, .hero-side, .panel, .timeline-item, .quote, .footer-box { padding: 20px; }
-      .section-title { font-size: 1.65rem; }
-    }
   </style>
 </head>
+
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#top">Praveen Kumar Pokala</a>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#products">Systems</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <strong>Praveen Kumar Pokala</strong>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="card hero-main">
-          <div class="eyebrow">Applied AI • Research • Leadership</div>
-          <h1>Praveen Kumar Pokala</h1>
-          <p class="lead"><strong>PhD (IISc, Gold Medalist) | M.Tech (IIT) | MBA (LBS)</strong></p>
-          <p class="lead">
-            Applied AI leader with experience across JPMorgan Chase, OLA Krutrim, Qualcomm, Reliance Jio, and academia, building and deploying AI systems in LLMs, multimodal AI, NLP, computer vision, and mathematical optimization.
-          </p>
-          <p class="lead">
-            Author of 25+ publications across venues including TPAMI, TCI, ICASSP, ICIP, ACL, NeurIPS, and CVPR-oriented ecosystems, with a focus on translating research into scalable, reliable, and production-relevant AI systems.
-          </p>
-          <div class="rule"></div>
-          <div class="headline-points">
-            <span class="pill">LLMs</span>
-            <span class="pill">Agentic Systems</span>
-            <span class="pill">Multimodal AI</span>
-            <span class="pill">Computer Vision</span>
-            <span class="pill">NLP</span>
-            <span class="pill">Mathematical Optimization</span>
-          </div>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#experience">View Experience</a>
-            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
-          </div>
-        </div>
+<section class="hero">
+  <div class="container hero-grid">
 
-        <aside class="card hero-side">
-          <div class="monogram">PK</div>
-          <h2 style="font-size:1.4rem;">Applied AI Leader</h2>
-          <p class="side-role">Vice President • Researcher • Guest Faculty • Speaker</p>
+    <!-- LEFT -->
+    <div class="card">
+      <h1>Praveen Kumar Pokala</h1>
+      <p class="lead"><strong>PhD (IISc, Gold Medalist) | M.Tech (IIT) | MBA (LBS)</strong></p>
 
-        <div class="contact-list">
+      <p class="lead">
+        Applied AI leader building enterprise AI systems across JPMorgan Chase,
+        OLA Krutrim, Qualcomm, and Reliance Jio.
+      </p>
+
+      <p class="lead">
+        Focus areas include LLMs, Agentic AI, multimodal systems,
+        NLP, computer vision, and optimization-driven AI systems.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card">
+      <h2>Contact</h2>
+
+      <div class="contact-list">
         <div>
-          <strong>Email:</strong> 
-          <a href="mailto:praveenkumar.pokala@gmail.com">praveenkumar.pokala@gmail.com</a>
+          <strong>Email:</strong>
+          <a href="mailto:praveenkumar.pokala@gmail.com">
+            praveenkumar.pokala@gmail.com
+          </a>
         </div>
-      
+
         <div>
-          <strong>Profiles:</strong> 
-          <a href="https://www.linkedin.com/in/praveen-kumar-pokala-phd-73509014" target="_blank" rel="noopener noreferrer">LinkedIn</a> • 
-          <a href="https://github.com/praveenkumar-pokala" target="_blank" rel="noopener noreferrer">GitHub</a> • 
-          <a href="https://scholar.google.com/citations?user=tgz2F38AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Publications</a> • 
-          <a href="https://medium.com/@pokalapraveeniitg" target="_blank" rel="noopener noreferrer">Blogs</a>
-        </div>
-      </div>
+          <strong>Profiles:</strong><br>
 
-          <div class="stat-boxes">
-            <div class="stat">
-              <strong>25+ Publications</strong>
-              Research and applied contributions across AI, optimization, multimodal systems, and language technologies.
-            </div>
-            <div class="stat">
-              <strong>Current Role</strong>
-              Vice President — Applied AI Lead at JPMorgan Chase.
-            </div>
-            <div class="stat">
-              <strong>Academic Distinction</strong>
-              IISc Gold Medalist and recipient of the IISc Best PhD Thesis Award.
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
+          <a href="https://www.linkedin.com/in/praveen-kumar-pokala-phd-73509014" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a><br>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Profile</div>
-          <h2 class="section-title">Professional summary</h2>
-          <p class="section-copy">
-            This profile presents a simple, elegant, and professional overview of a career shaped by rigorous academic foundations, enterprise AI leadership, research depth, and a consistent focus on building AI systems that are reliable in real-world settings.
-          </p>
-        </div>
-        <div class="grid-2">
-          <article class="card panel">
-            <h3>What defines the profile</h3>
-            <ul class="list">
-              <li>Deep foundation in AI research from IISc Bangalore and IIT Guwahati</li>
-              <li>Enterprise and industry experience across finance, telecom, edge AI, multimodal platforms, and academia</li>
-              <li>A career spanning LLMs, multimodal AI, NLP, computer vision, and optimization-driven systems</li>
-              <li>Strong interest in turning research into scalable, dependable production systems</li>
-            </ul>
-          </article>
-          <article class="card panel">
-            <h3>Current academic progression</h3>
-            <p>
-              Currently pursuing a Global MBA at Liverpool Business School, UK, complementing a technical background with broader strategic and business orientation.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+          <a href="https://github.com/praveenkumar-pokala" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a><br>
 
-    <section id="education">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Education</div>
-          <h2 class="section-title">Academic foundation</h2>
-        </div>
-        <div class="grid-2">
-          <article class="card panel">
-            <h3>PhD in AI — Indian Institute of Science (IISc), Bangalore</h3>
-            <p>Gold Medalist • Best PhD Thesis Award</p>
-          </article>
-          <article class="card panel">
-            <h3>Global MBA (In Progress) — Liverpool Business School, UK</h3>
-            <p>Strengthening business, strategy, and leadership orientation alongside AI depth.</p>
-          </article>
-          <article class="card panel">
-            <h3>M.Tech — Indian Institute of Technology (IIT), Guwahati</h3>
-            <p>GPA: 8.54</p>
-          </article>
-          <article class="card panel">
-            <h3>B.Tech — JNTU Hyderabad</h3>
-            <p>Engineering foundation supporting long-term academic and professional growth.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+          <a href="https://scholar.google.com/citations?user=tgz2F38AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+            Google Scholar
+          </a><br>
 
-    <section id="expertise">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Core Expertise</div>
-          <h2 class="section-title">Technical strengths</h2>
-        </div>
-        <div class="grid-3">
-          <article class="card panel">
-            <h3>LLMs and Agentic Systems</h3>
-            <p>Large language models, semantic search, reasoning systems, workflow-centric AI, and enterprise-grade adoption of modern language intelligence.</p>
-          </article>
-          <article class="card panel">
-            <h3>Multimodal AI</h3>
-            <p>Vision-language models, OCR, moderation, diffusion systems, and multimodal understanding in product and platform environments.</p>
-          </article>
-          <article class="card panel">
-            <h3>NLP, Vision, and Optimization</h3>
-            <p>Natural language processing, computer vision, sparse modeling, inverse problems, and mathematical optimization for AI systems.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="products">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Industry Products and Systems</div>
-          <h2 class="section-title">Representative system themes</h2>
-        </div>
-        <div class="grid-2">
-          <article class="card panel">
-            <h3>Multimodal AI Platform — OLA Krutrim</h3>
-            <p>Worked on VLMs, OCR, moderation, and diffusion-driven multimodal systems.</p>
-          </article>
-          <article class="card panel">
-            <h3>Real-Time Video Intelligence — Reliance Jio</h3>
-            <p>Led streaming analytics and scalable video intelligence systems for operational environments.</p>
-          </article>
-          <article class="card panel">
-            <h3>Edge AI Systems — Qualcomm</h3>
-            <p>Built efficient on-device computer vision systems with attention to latency and power trade-offs.</p>
-          </article>
-          <article class="card panel">
-            <h3>Optimization Engines — JPMorgan Chase</h3>
-            <p>Developed budget pacing and forecasting systems grounded in mathematical modeling and production needs.</p>
-          </article>
-          <article class="card panel">
-            <h3>LLM Transaction Intelligence — JPMorgan Chase</h3>
-            <p>Enterprise transaction search, semantic retrieval, and reasoning-oriented AI systems.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="awards">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Awards</div>
-          <h2 class="section-title">Recognition</h2>
-        </div>
-        <div class="grid-2">
-          <article class="card panel"><h3>IISc Gold Medalist</h3><p>Recognition for outstanding academic achievement.</p></article>
-          <article class="card panel"><h3>IISc Best PhD Thesis Award</h3><p>Recognition for the quality and significance of doctoral research.</p></article>
-          <article class="card panel"><h3>GATE Rank 251</h3><p>Top 0.12% performance.</p></article>
-          <article class="card panel"><h3>Visvesvaraya Fellowship</h3><p>Prestigious support for advanced research.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Professional Experience</div>
-          <h2 class="section-title">Career journey</h2>
-        </div>
-        <div class="timeline">
-          <article class="card timeline-item">
-            <h3>JPMorgan Chase</h3>
-            <div class="meta">2025–Present • Vice President — Applied AI Lead</div>
-            <ul class="list">
-              <li>Leading enterprise LLM systems for transaction search</li>
-              <li>Developing mathematical models for budget pacing and optimization</li>
-              <li>Driving research-to-production pipelines with a strong reliability focus</li>
-            </ul>
-          </article>
-          <article class="card timeline-item">
-            <h3>BITS Pilani</h3>
-            <div class="meta"> Guest Faculty (Honorary)</div>
-            <p>Teaching AI, machine learning, and systems design.</p>
-          </article>
-          <article class="card timeline-item">
-            <h3>OLA Krutrim</h3>
-            <div class="meta"> Staff Research Scientist</div>
-            <ul class="list">
-              <li>Built VLMs and diffusion models for multimodal systems</li>
-              <li>Designed evaluation frameworks and moderation pipelines</li>
-            </ul>
-          </article>
-          <article class="card timeline-item">
-            <h3>Reliance Jio (AICoE)</h3>
-            <div class="meta"> Senior Data Science Manager</div>
-            <ul class="list">
-              <li>Led real-time video intelligence systems</li>
-              <li>Built scalable computer vision pipelines</li>
-            </ul>
-          </article>
-          <article class="card timeline-item">
-            <h3>Qualcomm R&D</h3>
-            <div class="meta"> Senior Lead Engineer</div>
-            <ul class="list">
-              <li>Built edge AI systems for face and gaze understanding</li>
-              <li>Optimized latency–power trade-offs for practical deployment</li>
-            </ul>
-          </article>
-          <article class="card timeline-item">
-            <h3>Indian Institute of Science</h3>
-            <div class="meta"> PhD Researcher / Research Associate</div>
-            <ul class="list">
-              <li>Research in optimization, sparse modeling, and inverse problems</li>
-              <li>Developed deep learning approaches for computational imaging</li>
-            </ul>
-          </article>
-          <article class="card timeline-item">
-            <h3>GITAM University</h3>
-            <div class="meta"> Assistant Professor</div>
-            <p>Taught core engineering courses and mentored students.</p>
-          </article>
-          <article class="card timeline-item">
-            <h3>Thinkcell Learning Solutions</h3>
-            <div class="meta"> Subject Expert</div>
-            <p>Lead edTech platform for engineering courses.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="publications">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Selected Publications</div>
-          <h2 class="section-title">Research highlights</h2>
-        </div>
-        <div class="grid-2">
-          <article class="card panel">
-            <h3>Mathematical Optimization / AI</h3>
-            <ul class="list">
-              <li>Iteratively Reweighted MCP Minimization</li>
-              <li>Sparse Proximal Averaging Network</li>
-            </ul>
-            <p style="margin-top:12px;">Representative venues include IEEE TPAMI and IEEE TCI.</p>
-          </article>
-          <article class="card panel">
-            <h3>Multimodal LLMs</h3>
-            <ul class="list">
-              <li>Chitranuvad — ACL WMT</li>
-              <li>Chitrarth — Vision-Language LLM</li>
-            </ul>
-            <p style="margin-top:12px;">Work connected to modern multimodal and language-centric AI research.</p>
-          </article>
-          <article class="card panel">
-            <h3>Conference Presence</h3>
-            <ul class="list">
-              <li>CVPR</li>
-              <li>NeurIPS</li>
-              <li>ICASSP</li>
-              <li>ICIP</li>
-              <li>ISBI</li>
-            </ul>
-          </article>
-          <article class="card panel">
-            <h3>Publication Profile</h3>
-            <p>25+ publications spanning optimization, AI systems, multimodal learning, imaging, and language technologies.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="talks">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Selected Invited Talks</div>
-          <h2 class="section-title">Speaking and knowledge sharing</h2>
-        </div>
-        <div class="grid-3">
-          <article class="card panel">
-            <h3>Agentic AI for Enterprise</h3>
-            <p>IIM Ahmedabad</p>
-          </article>
-          <article class="card panel">
-            <h3>Agentic AI Workshop</h3>
-            <p>IIIT Hyderabad</p>
-          </article>
-          <article class="card panel">
-            <h3>AI for Mineral Exploration</h3>
-            <p>Government of India Industry Forum</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="card quote">
-          “From research to reality — building AI systems that think, act, and deliver where it matters.”
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-head">
-          <div class="kicker">Contact</div>
-          <h2 class="section-title">Professional contact</h2>
-          <p class="section-copy">Replace placeholder links below with your actual LinkedIn, GitHub, publication page, and blog URLs before publishing.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card panel">
-            <h3>Contact Details</h3>
-            <p>
-              Email: <a href="mailto:praveenkumar.pokala@gmail.com">praveenkumar.pokala@gmail.com</a><br />
-              Location: India
-            </p>
-          </article>
-          <article class="card panel">
-            <h3>Professional Links</h3>
-            <p>
-              <a href="#">LinkedIn</a><br />
-              <a href="#">GitHub</a><br />
-              <a href="#publications">Publications</a><br />
-              <a href="#">Blogs</a>
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="card footer-box">
-        <div>
-          <strong style="color:var(--heading);">Praveen Kumar Pokala</strong><br />
-          <span style="color:var(--muted);">Applied AI • Research • Leadership</span>
-        </div>
-        <div class="footer-links">
-          <a href="#top">Top</a>
-          <a href="#experience">Experience</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
+          <a href="https://medium.com/@pokalapraveeniitg" target="_blank" rel="noopener noreferrer">
+            Blogs
+          </a>
         </div>
       </div>
     </div>
-  </footer>
+
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About</h2>
+    <p class="lead">
+      AI researcher and practitioner with strong foundations in academic research
+      and enterprise system design, focused on translating research into scalable,
+      production-ready AI systems.
+    </p>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <h2>Experience</h2>
+    <p class="lead">
+      Vice President — Applied AI Lead at JPMorgan Chase. Previously worked at
+      OLA Krutrim, Qualcomm, Reliance Jio, and academia.
+    </p>
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <h2>Publications</h2>
+    <p class="lead">
+      25+ publications across TPAMI, TCI, ICASSP, ICIP, ACL, and major AI venues.
+    </p>
+
+    <p>
+      👉 View full list:
+      <a href="https://scholar.google.com/citations?user=tgz2F38AAAAJ&hl=en" target="_blank">
+        Google Scholar Profile
+      </a>
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+
+    <p>
+      Email:
+      <a href="mailto:praveenkumar.pokala@gmail.com">
+        praveenkumar.pokala@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.linkedin.com/in/praveen-kumar-pokala-phd-73509014" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/praveenkumar-pokala" target="_blank">GitHub</a> |
+      <a href="https://scholar.google.com/citations?user=tgz2F38AAAAJ&hl=en" target="_blank">Publications</a> |
+      <a href="https://medium.com/@pokalapraveeniitg" target="_blank">Blogs</a>
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    © 2026 Praveen Kumar Pokala
+  </div>
+</footer>
+
 </body>
 </html>
